@@ -17,6 +17,8 @@
 		
 		wp_head(); 
 	?>
+	<link rel='stylesheet' id='style-css'  href='http://localhost:8888/ornitorinco/wp-content/themes/clevercourse/custom.css' type='text/css' media='all' />
+	<script type='text/javascript' src='http://localhost:8888/ornitorinco/wp-content/themes/clevercourse/custom.js'></script>
 </head>
 
 <body <?php body_class(); ?>>

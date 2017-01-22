@@ -118,4 +118,94 @@
 	
 	// revision
 	include_once(get_template_directory() . '/gdlr-revision.php');
+	
+	
+	
+	/*Add Group Taxonomy to Courses*/
+	
+	
+	function groups_taxonomy() {  
+	    register_taxonomy(  
+		'groups',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+		'course',        //post type name
+		array(  
+		    'hierarchical' => true,  
+		    'label' => 'Corsi',  //Display name
+		    'query_var' => true,
+		    'rewrite' => array(
+			'slug' => 'courses', // This controls the base slug that will display before each term
+			'with_front' => false // Don't display the category base before 
+		    ),
+		    'capabilities' => array( 'manage_terms'=>'course_taxes', 'edit_terms'=>'course_taxes',
+					'delete_terms'=>'course_taxes', 'assign_terms'=>'course_taxes' ),
+		)  
+	    );
+		register_taxonomy(  
+		   'artista',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+		   'course',        //post type name
+		   array(  
+		       'hierarchical' => true,  
+		       'label' => 'Artisti',  //Display name
+		       'query_var' => true,
+		       'rewrite' => array(
+			   'slug' => 'artists', // This controls the base slug that will display before each term
+			   'with_front' => false // Don't display the category base before 
+		       ),
+		        'capabilities' => array( 'manage_terms'=>'course_taxes', 'edit_terms'=>'course_taxes',
+					'delete_terms'=>'course_taxes', 'assign_terms'=>'course_taxes' ),
+		   )  
+		);
+	     
+		register_taxonomy(  
+		'periodo',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+		'course',        //post type name
+		array(  
+		    'hierarchical' => true,  
+		    'label' => 'Periodi',  //Display name
+		    'query_var' => true,
+		    'rewrite' => array(
+			'slug' => 'artists', // This controls the base slug that will display before each term
+			'with_front' => false // Don't display the category base before 
+		    )
+		)  
+		);
+		register_taxonomy(  
+		'corrente',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+		'course',        //post type name
+		array(  
+		    'hierarchical' => true,  
+		    'label' => 'Correnti',  //Display name
+		    'query_var' => true,
+		    'rewrite' => array(
+			'slug' => 'correnti', // This controls the base slug that will display before each term
+			'with_front' => false // Don't display the category base before 
+		    ),
+		     'capabilities' => array( 'manage_terms'=>'course_taxes', 'edit_terms'=>'course_taxes',
+					'delete_terms'=>'course_taxes', 'assign_terms'=>'course_taxes' ),
+		)  
+		);
+		register_taxonomy(  
+		'area',  //The name of the taxonomy. Name should be in slug form (must not contain capital letters or spaces). 
+		'course',        //post type name
+		array(  
+		    'hierarchical' => true,  
+		    'label' => 'Area Geografica',  //Display name
+		    'query_var' => true,
+		    'rewrite' => array(
+			'slug' => 'area', // This controls the base slug that will display before each term
+			'with_front' => false // Don't display the category base before 
+		    ),
+		     'capabilities' => array( 'manage_terms'=>'course_taxes', 'edit_terms'=>'course_taxes',
+					'delete_terms'=>'course_taxes', 'assign_terms'=>'course_taxes' ),	
+		)  
+		);
+		
+	}  
+	add_action( 'init', 'groups_taxonomy');
+	
+	
+	
+	
+	
+	
 ?>

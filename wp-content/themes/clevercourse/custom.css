@@ -1,0 +1,69 @@
+/*RICERCA*/
+.sf-wrapper
+{
+	margin-bottom: 50px;
+}
+h3.title-custoom
+{
+	font-size: 18px;
+	text-transform: uppercase;
+	margin-bottom: 0px;
+	line-height: 1;
+	display: inline-block;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+.sf-result-head
+{
+	border: none;
+}
+.sf-element legend {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 100;
+    margin: 10px 0 2px;
+}
+.sf-element
+{
+	width: 32%;
+}
+.sf-element select {
+
+    color: #a4a4a4;
+}
+.sf-element:nth-of-type(2n) {
+    margin-right: 2%;
+}
+.sf-element:nth-of-type(3n) {
+    margin-right: 0;
+}
+.sf-result .gdlr-lms-col2
+{
+	width: 100%;
+}
+
+#reset_button_search
+{
+	margin: 19px 0 0 0;
+float: right;
+}
+
+
+
+
+ul.sf-result > li {
+    border: medium none;
+    float: left;
+    margin: 2% 2% 2% 0;
+    padding: 0;
+    width: 49%;
+}
+.sf-result .gdlr-lms-course-grid2 .gdlr-lms-item
+{
+	margin: 0;
+	border: none;
+}
+.sf-result li
+{
+	border: none;
+}

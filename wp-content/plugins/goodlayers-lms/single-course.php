@@ -114,7 +114,7 @@
 				gdlr_lms_get_social_shares();
 				echo '</div>';	// single-course-info
 
-				comments_template( '', true );	
+				//comments_template( '', true );	
 				echo '</div>'; // course-content
 				echo '<div class="clear"></div>';
 				echo '</div>'; // course-single		
