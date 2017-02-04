@@ -19,7 +19,7 @@
 
 		echo '<tr class="with-divider">';
 		echo '<td><a href="' . esc_url(add_query_arg(array('type'=>'my-course-student', 'course_id'=>get_the_ID()))) . '" >' . get_the_title() . '</a>';
-		gdlr_lms_print_course_info($course_options, array('date', 'type', 'price'));
+		gdlr_lms_print_course_info($course_options, array('date', 'price'));
 		echo '</td>';
 		
 		$seat  = empty($course_options['booked-seat'])? 0: $course_options['booked-seat'];

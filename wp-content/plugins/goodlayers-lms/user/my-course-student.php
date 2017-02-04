@@ -36,6 +36,7 @@
 	<?php if($course_options['online-course'] == 'disable'){ ?>
 	<th align="center" ><?php _e('Seat', 'gdlr-lms'); ?></th>
 	<?php } ?>
+	<th align="center" ><?php _e('Mail', 'gdlr-lms'); ?></th>
 	<th align="center" ><?php _e('Status', 'gdlr-lms'); ?></th>
 	<th align="center" ><?php _e('Code', 'gdlr-lms'); ?></th>
 	<?php if($course_options['online-course'] == 'enable'){ ?>
@@ -57,7 +58,7 @@
 	foreach($results as $result){
 		$user_id = $result->student_id;
 		$payment_info = unserialize($result->payment_info);
-		
+		$user_mail = $payment_info['email'];
 		echo '<tr>';
 		echo '<td>' . gdlr_lms_get_user_info($user_id) . ' ';
 		echo '<a href="#" title="' . esc_attr(__('Delete Student', 'gdlr-lms')) . '" class="gdlr-lms-delete-student" ';
@@ -66,11 +67,12 @@
 		echo 'data-id="' . $result->id . '" data-ajax="' . admin_url('admin-ajax.php') . '" >';
 		echo __('(Delete)', 'gdlr-lms') . '</a>';
 		echo '</td>';
-		
+		echo '<td>' . $user_mail . '</td>';
 		if($course_options['online-course'] == 'disable'){
 			echo '<td>' . $payment_info['amount'] . '</td>';
 		}
 		echo '<td>';
+		
 		if( $result->payment_status == 'paid' ){
 			_e('Paid', 'gdlr-lms');
 		}else{
