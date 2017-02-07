@@ -67,3 +67,9 @@ ul.sf-result > li {
 {
 	border: none;
 }
+
+
+#price_table_wp .container > table
+{
+	display: none;
+}
