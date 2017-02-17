@@ -72,9 +72,9 @@ add_shortcode('uw_product_table', 'wpuw_list_products_shortcode');
 function wpuw_list_products_shortcode ()
 {
     /** do not show anything is the user is not logged in */
-    if(!is_user_logged_in())
+    /*if(!is_user_logged_in())
         return false;
-
+	*/
     $args = array( 
         'post_type' => 'product', 
         'posts_per_page' => get_option( 'post_per_page', 10 ), 

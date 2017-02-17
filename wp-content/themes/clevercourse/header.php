@@ -17,8 +17,8 @@
 		
 		wp_head(); 
 	?>
-	<link rel='stylesheet' id='style-css'  href='http://localhost:8888/ornitorinco/wp-content/themes/clevercourse/custom.css' type='text/css' media='all' />
-	<script type='text/javascript' src='http://localhost:8888/ornitorinco/wp-content/themes/clevercourse/custom.js'></script>
+	<link rel='stylesheet' id='style-css'  href='<?php echo get_site_url(); ?>/wp-content/themes/clevercourse/custom.css' type='text/css' media='all' />
+	<script type='text/javascript' src='<?php echo get_site_url(); ?>/wp-content/themes/clevercourse/custom.js'></script>
 </head>
 
 <body <?php body_class(); ?>>

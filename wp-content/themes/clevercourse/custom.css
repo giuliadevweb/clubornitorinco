@@ -70,6 +70,7 @@ ul.sf-result > li {
 }
 
 
+#billing_country_field,
 #price_table_wp .container > table
 {
 	display: none;
